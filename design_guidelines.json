@@ -1,0 +1,90 @@
+{
+  "theme_and_archetype": {
+    "name": "Swiss & High-Contrast (Terminal Retro-Futurism variant)",
+    "theme": "DARK",
+    "description": "A developer-focused dark mode portfolio inspired by code editors and terminal aesthetics. High contrast, precise layout, neon accents against deep obsidian backgrounds. Combines Swiss structure with retro-futuristic data visual motifs tailored for an AI/ML developer."
+  },
+  "colors": {
+    "background": "#09090b",
+    "surface": "#18181b",
+    "primary_accent": "#22c55e",
+    "secondary_accent": "#0ea5e9",
+    "text_primary": "#f4f4f5",
+    "text_secondary": "#a1a1aa",
+    "border": "#27272a",
+    "error_warning": "#f59e0b"
+  },
+  "typography": {
+    "heading_font": "JetBrains Mono",
+    "body_font": "IBM Plex Sans",
+    "mono_font": "JetBrains Mono",
+    "rules": [
+      "Use JetBrains Mono for all Headings (H1-H4) to reinforce the developer persona.",
+      "Use IBM Plex Sans for long-form body text for readability.",
+      "Headlines (Size > 32px): MUST use tight letter spacing: tracking-tight or tracking-tighter.",
+      "Overlines / Labels / Code tags: MUST be Uppercase + Tiny + Wide Spacing (tracking-[0.2em]).",
+      "Font imports MUST be added to index.html or layout wrapper."
+    ]
+  },
+  "spacing_and_layout": {
+    "general": "Generous Spacing Philosophy: Use 2-3x more spacing than typical designs. p-6, p-8, p-12, p-24.",
+    "grids": [
+      "MODE A (TETRIS): Use for Hero section. Base Grid: grid-cols-1 md:grid-cols-12. gap-8 to gap-12.",
+      "MODE B (CONTROL ROOM): Use for Projects and Skills. Base Grid: grid-cols-1 md:grid-cols-2 lg:grid-cols-2. gap-6. Every pixel utilized. Card heights match."
+    ],
+    "surfaces": "Retro-Futurism (The Terminal Look). Deep black backgrounds with neon/high-contrast subtle borders (border-green-500/30). Subtle drop-shadow glow on text or active borders."
+  },
+  "motion_and_interactions": {
+    "animations": [
+      "Hover states: Neon glow drop shadow (drop-shadow-[0_0_8px_rgba(34,197,94,0.5)]) and slight translate-y.",
+      "Entrance: Framer Motion staggered grid reveals (opacity and y-axis shift).",
+      "Special: Typewriter effect using react-type-animation for main Hero text (e.g., 'Hello, I am Vansh. // AI/ML Developer')."
+    ],
+    "transitions": "transition-all duration-300 ease-out"
+  },
+  "components_strategy": {
+    "hero": "Asymmetric layout. Minimalist text with strong code formatting (e.g. const developer = { name: 'Vansh' }). Typing animation for role. Floating tech elements.",
+    "projects": "Bento grid (Control Room mode). Cards styled like IDE windows with 'macOS dots' (red, yellow, green) in the top-left header. Tech stack as monospace syntax-highlighted pills. Two sections: AI/API and ML Models.",
+    "skills": "The 'Kinetic Texture' approach. Large outline text of skills running continuously in background (react-fast-marquee), with a clean foreground grid of actual tool icons.",
+    "resume": "Prominent 'Download CV' button styled as a CLI executable command (e.g. '> ./download_resume.pdf') with a glowing green border.",
+    "contact": "Form contained within a mock terminal/IDE window. Monospace labels. Accessible high-contrast inputs.",
+    "navigation": "Sticky glassmorphism header (backdrop-blur-xl bg-black/60) with subtle bottom border (border-white/10). Links visible on desktop."
+  },
+  "icons_and_assets": {
+    "library": "lucide-react",
+    "instructions": "Use for UI adornments (GitHub, LinkedIn, Mail, Download, External Link)."
+  },
+  "media": {
+    "hero_ambient_bg": {
+      "url": "https://images.unsplash.com/photo-1744555270794-6d378b9e7cd3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwyfHxkYXJrJTIwY29kaW5nJTIwc2V0dXB8ZW58MHx8fHwxNzc4MzU0NDM3fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Dark coding setup. Use as a heavily darkened overlay background (opacity 10-20%) for the Hero section to add subtle environmental texture."
+    },
+    "project_ai_nova": {
+      "url": "https://images.pexels.com/photos/17483870/pexels-photo-17483870.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Digital neural networks and data flow for 'Nova AI Desktop Assistant' project card."
+    },
+    "project_ai_docgpt": {
+      "url": "https://images.unsplash.com/photo-1762279388988-3f8abcc7dca2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGRhdGElMjB2aXN1YWxpemF0aW9uJTIwZGFya3xlbnwwfHx8fDE3NzgzNTQ0NTR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Neon abstract lines for 'DocGPT medical chatbot' project card."
+    },
+    "project_ml_car": {
+      "url": "https://images.pexels.com/photos/17279851/pexels-photo-17279851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Vibrant digital art for 'Car Prediction Model' project card."
+    },
+    "project_ml_churn": {
+      "url": "https://images.unsplash.com/photo-1771793231904-a516cd3baff4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGRhdGElMjB2aXN1YWxpemF0aW9uJTIwZGFya3xlbnwwfHx8fDE3NzgzNTQ0NTR8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract purple strands for 'Customer Churn Prediction' project card."
+    }
+  },
+  "instructions_to_main_agent": [
+    "You MUST use 'JetBrains Mono' for all headings and code-related typography.",
+    "Use framer-motion for page load reveals and hover effects.",
+    "Use react-type-animation for terminal typing effects in the hero section.",
+    "Use react-fast-marquee for a kinetic typography skills background.",
+    "Include data-testid on all interactive elements (links, buttons, form inputs).",
+    "Avoid generic Tailwind columns for layout—use the specified CSS Grid patterns.",
+    "Implement smooth scrolling using standard CSS scroll-behavior: smooth.",
+    "Ensure hover states use a subtle green neon glow effect to match the terminal aesthetic.",
+    "Do NOT use HTML-based components for advanced user interactions; customize Shadcn components instead."
+  ]
+}

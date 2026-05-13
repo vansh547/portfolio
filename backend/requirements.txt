@@ -1,0 +1,21 @@
+# Core Web Server
+fastapi==0.110.1
+uvicorn==0.25.0
+starlette==0.37.2
+python-dotenv==1.2.2
+python-multipart==0.0.27
+
+# SQL Database & Drivers (Fixed for version compatibility)
+sqlalchemy>=1.4.42,<1.5.0
+databases[postgresql]==0.8.0
+psycopg2-binary==2.9.9
+asyncpg==0.29.0
+
+# Validation & Utilities
+pydantic[email]==2.6.1
+email-validator==2.3.0
+typing_extensions==4.15.0
+
+# Optional: AI Libraries
+google-generativeai==0.8.6
+openai==1.99.9
